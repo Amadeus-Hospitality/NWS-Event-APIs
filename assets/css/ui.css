@@ -1,0 +1,318 @@
+﻿/*================================ FUNCTION DIARY / GRC / BOOKING ROOM ===========================================*/
+.grc .grc-header {
+  text-align: right;
+}
+.grc .grc-header span {
+  color: #333;
+  font: bold 14px 'Helvetica';
+  padding: 0 5px;
+  text-align: right;
+}
+.grc .grc-row {
+  height: 30px;
+  border: 0;
+}
+.grc .grc-row .grc-item {
+  color: #333;
+  text-align: right;
+  border: 0;
+}
+.grc .grc-row .grc-item span {
+  display: block;
+  padding-right: 2px;
+}
+.grc .room-control {
+  background: #fff;
+  border-top: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+  margin-bottom: 2px;
+}
+.grc .room-label {
+  border: none;
+  margin: 0;
+}
+.grc .room-label span {
+  text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.7);
+  color: #00;
+  display: block;
+  font: normal 16px 'Helvetica';
+  padding: 7px 10px 5px 10px;
+  text-decoration: none;
+}
+.grc .room-column h5 {
+  padding-left: 15px;
+  font: normal 19px 'Helvetica';
+}
+
+.function-diary-nav .schedule-date-holder input, .schedule-navigator .schedule-date-holder input {
+  display: block;
+  width: 99%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #aaaaaa));
+  background-image: -webkit-linear-gradient(#ffffff, #aaaaaa);
+  background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
+  background-image: -o-linear-gradient(#ffffff, #aaaaaa);
+  background-image: linear-gradient(#ffffff, #aaaaaa);
+  font: bold 15px "Helvetica";
+  text-align: center;
+  outline: none;
+}
+.function-diary-nav .schedule-date-holder input:focus, .schedule-navigator .schedule-date-holder input:focus {
+  outline: none;
+}
+.function-diary-nav .nav-arrow, .schedule-navigator .nav-arrow {
+  width: 3%;
+}
+.function-diary-nav .nav-date, .schedule-navigator .nav-date {
+  width: 94%;
+}
+
+.booking-room {
+  margin-top: 10px;
+}
+
+.function-diary, .grc {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background: #D4D5D6;
+  padding: 5px 2px 1px 2px;
+}
+.function-diary .schedule-header span, .grc .schedule-header span {
+  text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.7);
+  color: #969797;
+  font: normal 11px 'Helvetica';
+}
+.function-diary .schedule-row, .grc .schedule-row {
+  height: 30px;
+  border: 0;
+}
+.function-diary .schedule-diary, .grc .schedule-diary {
+  background: #EFF0F2;
+  border-top: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+  margin-bottom: 2px;
+}
+.function-diary .schedule-diary .room-column, .grc .schedule-diary .room-column {
+  width: 10%;
+}
+.function-diary .schedule-diary .schedule-column, .grc .schedule-diary .schedule-column {
+  width: 90%;
+  overflow: hidden;
+}
+.function-diary .schedule-diary .schedule-hold, .grc .schedule-diary .schedule-hold {
+  border: solid 2px white;
+    opacity: 0.5;
+    background-image: linear-gradient(#6a8ae5, #aabcf0);
+}
+.function-diary .schedule-diary .schedule-partial, .grc .schedule-diary .schedule-partial {
+  border: solid 2px white;
+    opacity: 0.5;
+    background-image: linear-gradient(#e59b6a, #f5c09d);
+}
+.function-diary .room-label, .grc .room-label {
+  border: none;
+  margin: 0;
+}
+.function-diary .room-label a, .grc .room-label a {
+  text-shadow: 0px -1px 1px rgba(255, 255, 255, 0.7);
+  color: #969797;
+  display: block;
+  font: normal 19px 'Helvetica';
+  padding: 7px 10px 5px 10px;
+  text-decoration: none;
+}
+
+/*================================ NAV ==========================================================================*/
+ul.nav-account {
+  list-style: none;
+  margin: 5px 0 10px 0;
+  padding: 0;
+  height: 60px;
+}
+ul.nav-account li {
+  list-style: none;
+  float: left;
+  padding: 0 6px 0 0;
+}
+ul.nav-account li:nth-last-child(2) {
+  padding-right: 25px;
+}
+ul.nav-account li:last-child {
+  padding-right: 0;
+}
+
+/*================================ RESPONSIVE ==================================================================*/
+@media (min-width: 321px) and (max-width: 480px) {
+  ul.nav-account {
+    list-style: none;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    height: 60px;
+  }
+  ul.nav-account li {
+    list-style: none;
+    float: left;
+    padding: 0 6px 0 0;
+  }
+  ul.nav-account li:nth-last-child(2) {
+    padding-right: 65px;
+  }
+  ul.nav-account li:last-child {
+    padding-right: 0;
+  }
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  .schedule-navigator .nav-arrow {
+    width: 5% !important;
+  }
+  .schedule-navigator .nav-date {
+    width: 86% !important;
+  }
+}
+@media (max-width: 767px) {
+  ul.nav-account {
+    list-style: none;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    height: 60px;
+  }
+  ul.nav-account li {
+    list-style: none;
+    float: left;
+    padding: 0 6px 0 0;
+  }
+  ul.nav-account li:nth-last-child(2) {
+    padding-right: 65px;
+  }
+  ul.nav-account li:last-child {
+    padding-right: 0;
+  }
+
+  .function-diary-nav .schedule-date-holder input, .schedule-navigator .schedule-date-holder input {
+    display: block;
+    width: 95% !important;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #aaaaaa));
+    background-image: -webkit-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -o-linear-gradient(#ffffff, #aaaaaa);
+    background-image: linear-gradient(#ffffff, #aaaaaa);
+  }
+  .function-diary-nav .nav-arrow, .schedule-navigator .nav-arrow {
+    width: 10% !important;
+  }
+  .function-diary-nav .nav-date, .schedule-navigator .nav-date {
+    width: 80% !important;
+  }
+}
+@media (max-width: 480px) {
+  .function-diary-nav .schedule-date-holder input, .schedule-navigator .schedule-date-holder input {
+    display: block;
+    width: 90% !important;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #aaaaaa));
+    background-image: -webkit-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -o-linear-gradient(#ffffff, #aaaaaa);
+    background-image: linear-gradient(#ffffff, #aaaaaa);
+  }
+  .function-diary-nav .nav-arrow, .schedule-navigator .nav-arrow {
+    width: 30px !important;
+  }
+  .function-diary-nav .nav-date, .schedule-navigator .nav-date {
+    width: 210px !important;
+  }
+
+  .room-column {
+    width: 25%;
+  }
+
+  .schedule-column {
+    width: 74%;
+  }
+
+  ul.nav-account {
+    list-style: none;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    height: 60px;
+  }
+  ul.nav-account li {
+    list-style: none;
+    float: left;
+    padding: 0 6px 0 0;
+  }
+  ul.nav-account li:nth-last-child(2) {
+    padding-right: 25px;
+  }
+  ul.nav-account li:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .function-diary-nav .schedule-date-holder input, .schedule-navigator .schedule-date-holder input {
+    display: block;
+    width: 90% !important;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #aaaaaa));
+    background-image: -webkit-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
+    background-image: -o-linear-gradient(#ffffff, #aaaaaa);
+    background-image: linear-gradient(#ffffff, #aaaaaa);
+  }
+  .function-diary-nav .nav-arrow, .schedule-navigator .nav-arrow {
+    width: 5% !important;
+  }
+  .function-diary-nav .nav-date, .schedule-navigator .nav-date {
+    width: 90% !important;
+  }
+}
+@media (max-width: 495px) and (orientation: landscape) {
+  ul.nav-account {
+    list-style: none;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    height: 60px;
+  }
+  ul.nav-account li {
+    list-style: none;
+    float: left;
+    padding: 0 6px 0 0;
+  }
+  ul.nav-account li:nth-last-child(2) {
+    padding-right: 65px;
+  }
+  ul.nav-account li:last-child {
+    padding-right: 0;
+  }
+}
+/*================================ BUTTONS ===================================================================*/
+.btn-activity, .btn-contact, .btn-bookings, .btn-create-activity, .btn-create-space-hold {
+  display: block;
+  height: 60px;
+  width: 60px;
+}
+
+.btn-activity {
+  background: url("../img/btn-activities-active.png") no-repeat;
+  background-size: cover;
+}
+
+.btn-contact {
+  background: url("../img/btn-contacts-active.png") no-repeat;
+  background-size: cover;
+}
+
+.btn-bookings {
+  background: url("../img/btn-bookings-active.png") no-repeat;
+  background-size: cover;
+}
+
+.btn-create-activity {
+  background: url("../img/btn-create-activity-active.png") no-repeat;
+  background-size: cover;
+}
+
+.btn-create-space-hold {
+  background: url("../img/btn-create-space-hold.png") no-repeat;
+  background-size: cover;
+}

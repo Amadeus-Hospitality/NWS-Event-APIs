@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OAuth Integrated Service Test</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mockup.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ui.css">
+
+</head>
+<body>
+    <div style="margin-left : 5px;margin-top: -50px;">
+        <h3>Token Acquisition Example</h3>
+        <span>1. Click to Login and Run the Location Search&nbsp;</span><a href="" class="btn" id="btnLogingAndRunSample" onclick="runSample(); return false;">Login and Run Sample Service Call</a>
+        <br /><br />
+        <span>2. Refresh the Location Search&nbsp;</span><a href="" class="btn" id="btnRunSample" disabled onclick="reRunSample(); return false;">Refresh Data from Sample Service Call</a>
+        <br /><br />
+        <span>3. Logout (this clears the tokens entirely)&nbsp;</span><a href="" class="btn" id="btnLogout" disabled onclick="runLogout(); return false;">Logout</a>
+        <br /><br />
+        <div id="output" />
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/ns/Configuration.js"></script>
+    <script type="text/javascript" src="assets/js/ns/TokenManagement.js"></script>
+    <script type="text/javascript" src="assets/js/samples/TokenAcquisition.js"></script>
+    <script type="text/javascript">
+        function runSample()
+        {
+            if (Login()) {
+                
+                $("#output").text("Running Location Search...");
+
+                window.setTimeout(function () {
+                    SampleServiceCall();
+                    $("#btnRunSample").removeAttr('disabled');
+                    $("#btnLogout").removeAttr('disabled');
+                }, 0);
+            }
+        }
+
+        function reRunSample() {
+            $("#output").text("Updating Location Search...");
+
+            window.setTimeout(function () {
+                SampleServiceCall();
+            }, 0);
+        }
+
+        function runLogout() {
+            $("#btnRunSample").addAttr('disabled');
+            $("#btnLogout").addAttr('disabled');
+            Logout();
+        }
+
+    </script>
+
+</body>
+</html>
